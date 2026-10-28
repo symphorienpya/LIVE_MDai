@@ -1087,7 +1087,7 @@
       }
 
       /* 🚀 AMAZING ANIMATED AI LOGO STYLES 🚀 - DISABLED FOR BACKGROUND IMAGE */
-      /*
+      
       .ai-logo-container {
         position: fixed;
         top: 15px;
@@ -1157,7 +1157,7 @@
       .ai-logo:active {
         transform: scale(0.9);
         animation: aiClick 0.2s ease-out;
-      }      /* Particle Effects */
+      }      /* Particle Effects
       .ai-particles {
         position: absolute;
         top: 50%;
@@ -1839,6 +1839,341 @@
         background: rgba(0, 212, 255, 0.3);
         color: white;
       }
+      /* Modern AI workspace theme */
+      :root {
+        --ai-cyan: #59d9ff;
+        --ai-violet: #9b87f5;
+        --ai-ink: #07111f;
+        --ai-panel: rgba(10, 20, 38, 0.82);
+      }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        background-color: var(--ai-ink);
+        background-image:
+          radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.16), transparent 28%),
+          radial-gradient(circle at 88% 12%, rgba(139, 92, 246, 0.18), transparent 30%),
+          radial-gradient(circle at 50% 100%, rgba(236, 72, 153, 0.08), transparent 34%),
+          linear-gradient(145deg, #050b16 0%, #0b1730 52%, #080d1c 100%);
+        background-size: auto, auto, auto, auto;
+      }
+
+      body::before {
+        background:
+          linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+        background-size: 42px 42px;
+        mask-image: linear-gradient(to bottom, black, transparent 92%);
+        opacity: .8;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        box-shadow: inset 0 0 140px rgba(0, 0, 0, .68);
+      }
+
+      .container { max-width: 1320px; padding: 28px; }
+
+      .header { margin-bottom: 30px; }
+
+      .header h1 {
+        width: fit-content;
+        margin-inline: auto;
+        letter-spacing: -0.045em;
+        filter: none;
+        animation: titleGlow 4s ease-in-out infinite alternate;
+      }
+
+      .header h1::after {
+        content: "  ●";
+        font-size: .24em;
+        vertical-align: middle;
+        color: #5eead4;
+        -webkit-text-fill-color: #5eead4;
+        text-shadow: 0 0 18px rgba(94, 234, 212, .9);
+      }
+
+      .header p {
+        letter-spacing: .02em;
+        font-size: 1rem;
+      }
+
+      .header::after {
+        width: 160px;
+        height: 1px;
+        bottom: -18px;
+        background: linear-gradient(90deg, transparent, #59d9ff, #9b87f5, transparent);
+      }
+
+      .assistant-container {
+        height: calc(100vh - 170px);
+        min-height: 620px;
+        max-height: 820px;
+        grid-template-columns: minmax(0, 1fr) 330px;
+        gap: 22px;
+        padding: 18px;
+        border-radius: 28px;
+        border-color: rgba(148, 163, 184, .18);
+        background:
+          linear-gradient(145deg, rgba(15, 27, 49, .94), rgba(7, 13, 27, .88));
+        box-shadow:
+          0 34px 90px rgba(0, 0, 0, .48),
+          inset 0 1px rgba(255, 255, 255, .045);
+      }
+
+      .assistant-container::before {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(89,217,255,.9), rgba(155,135,245,.9), transparent);
+      }
+
+      .main-content, .chat-area { min-height: 0; }
+
+      .chat-area {
+        height: 100%;
+        max-height: none;
+        margin-bottom: 14px;
+        padding: 26px 28px;
+        border-radius: 22px;
+        border-color: rgba(148, 163, 184, .11);
+        background:
+          radial-gradient(circle at 50% 0, rgba(89, 217, 255, .035), transparent 40%),
+          rgba(3, 9, 20, .58);
+        box-shadow: inset 0 0 55px rgba(0, 0, 0, .22);
+      }
+
+      .chat-area::-webkit-scrollbar { width: 5px; }
+      .chat-area::-webkit-scrollbar-track { background: transparent; }
+      .chat-area::-webkit-scrollbar-thumb {
+        background: linear-gradient(#59d9ff, #9b87f5);
+        border-radius: 999px;
+      }
+
+      .message {
+        max-width: min(78%, 720px);
+        margin-bottom: 14px;
+        padding: 13px 17px;
+        border-radius: 18px;
+        line-height: 1.58;
+        font-size: 14px;
+        letter-spacing: .005em;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+        animation: messageSlide .32s cubic-bezier(.2,.8,.2,1);
+      }
+
+      .assistant-message {
+        background: linear-gradient(145deg, rgba(24, 40, 67, .98), rgba(16, 29, 51, .98));
+        border: 1px solid rgba(89, 217, 255, .14);
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, .22), inset 0 1px rgba(255,255,255,.025);
+      }
+
+      .assistant-message::before {
+        content: "AI";
+        display: inline-grid;
+        place-items: center;
+        width: 23px;
+        height: 23px;
+        margin-right: 9px;
+        vertical-align: -1px;
+        border-radius: 50%;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: .05em;
+        color: #07111f;
+        background: linear-gradient(135deg, #67e8f9, #a78bfa);
+        box-shadow: 0 0 14px rgba(89, 217, 255, .28);
+      }
+
+      .user-message {
+        background: linear-gradient(135deg, #4f8ff7, #8b6cf6);
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 10px 28px rgba(79, 143, 247, .18);
+      }
+
+      .system-message {
+        max-width: 680px;
+        border-radius: 14px;
+        border: 1px solid rgba(94, 234, 212, .16);
+        color: #b7c8dc;
+        background: rgba(94, 234, 212, .055);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .input-area {
+        flex: 0 0 auto;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 18px;
+        border-color: rgba(148, 163, 184, .16);
+        background: rgba(6, 13, 27, .88);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, .24);
+      }
+
+      .text-input {
+        height: 48px;
+        padding: 0 18px;
+        border-radius: 12px;
+        border-color: transparent;
+        background: rgba(255, 255, 255, .035);
+      }
+
+      .text-input:focus {
+        border-color: rgba(89, 217, 255, .38);
+        background: rgba(255, 255, 255, .055);
+        box-shadow: 0 0 0 3px rgba(89, 217, 255, .07);
+        transform: none;
+      }
+
+      .btn {
+        height: 48px;
+        padding: 0 18px;
+        border-radius: 12px;
+        text-transform: none;
+        letter-spacing: .01em;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #2fb9e8, #7667dd);
+        box-shadow: 0 10px 24px rgba(47, 185, 232, .16);
+      }
+
+      .btn-success { background: rgba(16, 185, 129, .18); border: 1px solid rgba(52,211,153,.28); }
+      .btn-danger { background: rgba(239, 68, 68, .12); border: 1px solid rgba(248,113,113,.18); }
+
+      .sidebar {
+        gap: 12px;
+        padding-right: 3px;
+        overflow-y: auto;
+      }
+
+      .status-panel, .advanced-settings-panel {
+        border-radius: 18px;
+        border-color: rgba(148, 163, 184, .12);
+        background: rgba(12, 22, 40, .72);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, .16);
+      }
+
+      .status-panel h3, .advanced-settings-panel h3 {
+        font-size: 13px;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+      }
+
+      .quick-actions { gap: 8px; }
+
+      .quick-action-btn {
+        min-height: 48px;
+        border-radius: 12px;
+        border-color: rgba(148, 163, 184, .12);
+        background: rgba(255, 255, 255, .035);
+        text-align: left;
+        font-weight: 600;
+        transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      }
+
+      .quick-action-btn:hover {
+        transform: translateY(-2px);
+        border-color: rgba(89, 217, 255, .32);
+        background: linear-gradient(135deg, rgba(89,217,255,.09), rgba(155,135,245,.09));
+      }
+
+      .voice-visualizer {
+        height: 0;
+        margin-bottom: 0;
+        opacity: 0;
+        transition: all .2s ease;
+      }
+
+      .voice-visualizer:has(.wave-bar) { display: none; }
+
+      @media (max-width: 1024px) {
+        .assistant-container { height: auto; max-height: none; min-height: 680px; }
+        .sidebar { max-height: 560px; }
+      }
+
+      @media (max-width: 768px) {
+        .container { padding: 16px 12px; }
+        .header { margin-bottom: 22px; }
+        .header h1 { font-size: 2.4rem; }
+        .header p { font-size: .9rem; }
+        .assistant-container { padding: 10px; border-radius: 22px; }
+        .chat-area { padding: 18px 14px; min-height: 460px; }
+        .message { max-width: 90%; font-size: 13px; }
+        .input-area { flex-wrap: wrap; }
+        .text-input { flex-basis: 100%; }
+        .btn { flex: 1; }
+        .sidebar { max-height: none; }
+      }
+
+      @media (max-width: 480px) {
+        .container { padding-inline: 8px; }
+        .header h1 { font-size: 2rem; }
+        .assistant-container { padding: 7px; }
+        .chat-area { min-height: 430px; }
+        .message { max-width: 94%; padding: 12px 14px; }
+        .assistant-message::before { width: 21px; height: 21px; }
+      }
+
+      @supports (height: 100dvh) {
+        .assistant-container { height: calc(100dvh - 170px); }
+      }
+
+      @media (max-width: 1180px) {
+        .assistant-container {
+          grid-template-columns: minmax(0, 1fr) 280px;
+          gap: 14px;
+        }
+      }
+
+      @media (max-width: 920px) {
+        .assistant-container {
+          height: auto;
+          grid-template-columns: 1fr;
+          min-height: 0;
+        }
+        .main-content { min-height: 68vh; }
+        .chat-area { height: 58vh; min-height: 420px; }
+        .sidebar {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          max-height: none;
+          overflow: visible;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .header { margin-bottom: 18px; }
+        .header h1 { font-size: clamp(1.85rem, 10vw, 2.5rem); }
+        .header p { line-height: 1.4; padding-inline: 8px; }
+        .assistant-container { min-height: calc(100dvh - 130px); }
+        .main-content { min-height: 600px; }
+        .chat-area { height: calc(100dvh - 310px); min-height: 390px; }
+        .sidebar { grid-template-columns: 1fr; }
+        .input-area { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .text-input { grid-column: 1 / -1; width: 100%; }
+        .btn { width: 100%; min-width: 0; padding-inline: 8px; font-size: 12px; }
+      }
+
+      @media (max-width: 380px) {
+        .container { padding-inline: 5px; }
+        .assistant-container { padding: 5px; }
+        .chat-area { min-height: 360px; padding-inline: 10px; }
+        .input-area { gap: 6px; padding: 7px; }
+        .btn { font-size: 11px; }
+        .assistant-message::before { display: none; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+      }
+
     </style>
   </head>
   <body>
@@ -1886,16 +2221,14 @@
 
     <div class="container">
       <div class="header">
-        <h1>MD AI</h1>
-        <p>Your sophisticated AI personal assistant</p>
+        <h1>MDai</h1>
+        <p>Your personal English teacher and conversation assistant</p>
       </div>
       <div class="assistant-container">
         <div class="main-content">
           <div class="chat-area" id="chatArea">
             <div class="message system-message" id="welcomeMessage">
-              Hello! I'm MADELEINE, your AI assistant. I'm here to help with
-              advanced queries, creative tasks, and intelligent conversations.
-              How may I assist you today?
+              Hello! Before we begin learning English, what's your name?
             </div>
           </div>
 
@@ -1947,39 +2280,39 @@
             <div class="quick-actions">
               <button
                 class="quick-action-btn"
-                onclick="quickCommand('analyze market trends')"
+                onclick="quickCommand('start an English lesson')"
               >
-                📈 Analytics
+                📚 English Lesson
               </button>
               <button
                 class="quick-action-btn"
-                onclick="quickCommand('create a workout plan')"
+                onclick="quickCommand('practice conversation')"
               >
-                � Fitness
+                💬 Practice
               </button>
               <button
                 class="quick-action-btn"
-                onclick="quickCommand('suggest productivity tips')"
+                onclick="quickCommand('test my vocabulary')"
               >
-                ⚡ Productivity
+                📝 Vocabulary Quiz
               </button>
               <button
                 class="quick-action-btn"
-                onclick="quickCommand('explain quantum computing')"
+                onclick="quickCommand('explain English grammar')"
               >
-                🔬 Tech Insights
+                🔤 Grammar
               </button>
               <button
                 class="quick-action-btn"
-                onclick="quickCommand('plan a healthy meal')"
+                onclick="quickCommand('help me with pronunciation')"
               >
-                � Nutrition
+                🗣️ Pronunciation
               </button>
               <button
                 class="quick-action-btn"
-                onclick="quickCommand('mindfulness exercise')"
+                onclick="quickCommand('correct my English')"
               >
-                � Wellness
+                ✅ Correct English
               </button>
             </div>
           </div>
@@ -2034,6 +2367,7 @@
       class PersonalAssistant {
         constructor() {
           this.isListening = false;
+          this.awaitingName = false;
           this.recognition = null;
           this.synthesis = window.speechSynthesis;
           this.voices = [];
@@ -2084,6 +2418,7 @@
           this.initializeSpeechAPIs();
           this.bindEvents();
           this.loadVoices();
+          this.initializeStudentIdentity();
         }
 
         loadUserData() {
@@ -2106,6 +2441,271 @@
           } catch (e) {
             console.log("Could not save user data");
           }
+        }
+
+        getEnglishConversationAnswer(command) {
+          const text = command.toLowerCase().replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ").trim();
+          if (!text) return null;
+
+          const lessons = [
+            ["happy", "feeling or showing pleasure", "I am happy today."],
+            ["sad", "feeling unhappy", "She feels sad because it is raining."],
+            ["angry", "feeling strong annoyance", "Please remain calm when you feel angry."],
+            ["excited", "very interested or enthusiastic", "We are excited about the trip."],
+            ["tired", "needing rest", "I am tired after work."],
+            ["hungry", "wanting food", "The children are hungry."],
+            ["thirsty", "wanting a drink", "After running, I am thirsty."],
+            ["beautiful", "very attractive or pleasing", "The garden is beautiful."],
+            ["important", "having great value or influence", "English practice is important."],
+            ["difficult", "not easy to do", "This exercise is difficult at first."],
+            ["easy", "simple to understand or do", "The first lesson is easy."],
+            ["quickly", "at a fast speed", "Please read the sentence quickly."],
+            ["slowly", "at a low speed", "Speak slowly and clearly."],
+            ["always", "on every occasion", "I always drink water in the morning."],
+            ["never", "not at any time", "Do not ever eat alone if you are a beginner—never mind, use that example."],
+            ["often", "many times", "We often practise together."],
+            ["sometimes", "on some occasions", "Sometimes I watch English films."],
+            ["usually", "in most cases", "She usually catches the bus."],
+            ["morning", "the early part of the day", "Good morning, my teacher."],
+            ["afternoon", "the time between morning and evening", "Good afternoon! How are you?"],
+            ["evening", "the later part of the day", "We meet every evening."],
+            ["yesterday", "the day before today", "I visited the library yesterday."],
+            ["today", "this day", "I am learning English today."],
+            ["tomorrow", "the day after today", "I will practise tomorrow."],
+            ["family", "people related by birth or marriage", "My family is very supportive."],
+            ["friend", "a person you know well and trust", "He is my best friend."],
+            ["student", "a person who studies", "The student asks a useful question."],
+            ["teacher", "a person who helps others learn", "Our teacher explains the rule."],
+            ["doctor", "a medical professional", "The doctor listens to the patient."],
+            ["hospital", "a place where sick people receive care", "She works at the hospital."],
+            ["home", "the place where a person lives", "I go home after school."],
+            ["school", "a place for education", "The children walk to school."],
+            ["market", "a place where goods are bought and sold", "My mother buys fruit at the market."],
+            ["station", "a place where transport stops", "The train station is near the bank."],
+            ["airport", "a place for aircraft", "We arrived at the airport at eight."],
+            ["hotel", "a place where travellers stay", "I booked a room at the hotel."],
+            ["restaurant", "a place where meals are served", "The restaurant opens at noon."],
+            ["breakfast", "the first meal of the day", "I eat eggs for breakfast."],
+            ["lunch", "the midday meal", "Lunch starts at one o'clock."],
+            ["dinner", "the evening meal", "We cook dinner together."],
+            ["water", "a clear liquid people drink", "Please give me a glass of water."],
+            ["food", "things that people or animals eat", "This food tastes delicious."],
+            ["weather", "conditions in the air such as rain or sun", "The weather is cold today."],
+            ["sunny", "full of sunlight", "It is sunny, so take a hat."],
+            ["rainy", "having a lot of rain", "The rainy day felt peaceful."],
+            ["cloudy", "covered by clouds", "It will be cloudy tomorrow."],
+            ["windy", "having strong wind", "Keep the door closed because it is windy."],
+            ["hot", "having a high temperature", "The tea is too hot."],
+            ["cold", "having a low temperature", "The cold water refreshed me."],
+            ["big", "large in size", "They live in a big house."],
+            ["small", "little in size", "There is a small bookshop nearby."],
+            ["new", "recently made or not existing before", "I bought a new notebook."],
+            ["old", "having existed for a long time", "The old bridge is beautiful."],
+            ["good", "of a high standard", "That was a good answer."],
+            ["bad", "of a low standard or unpleasant", "We had a bad experience."],
+            ["cheap", "low in price", "The bus ticket is cheap."],
+            ["expensive", "high in price", "That hotel is expensive."],
+            ["begin", "to start", "The lesson will begin at nine."],
+            ["finish", "to complete or end", "Please finish the exercise."],
+            ["remember", "to keep something in your mind", "Remember the new word."],
+            ["forget", "not to remember", "Don't forget your keys."],
+            ["believe", "to accept that something is true", "I believe you can succeed."],
+            ["understand", "to know the meaning", "I understand this grammar rule."],
+            ["explain", "to make something clear", "Please explain the question again."],
+            ["ask", "to request information or help", "Ask a question if you are unsure."],
+            ["answer", "a reply to a question", "Her answer is clear."],
+            ["listen", "to pay attention to sound", "Listen carefully to the speaker."],
+            ["speak", "to say words aloud", "Speak in complete sentences."],
+            ["read", "to look at and understand written words", "Read the story every evening."],
+            ["write", "to form letters or words", "Write your name here."],
+            ["practice", "to repeat an activity to improve", "Regular practice makes you better."],
+            ["improve", "to become better", "I practise every day to improve."],
+            ["achieve", "to succeed in reaching a goal", "You can achieve your English goal."],
+            ["prepare", "to get ready", "Prepare your notes before the meeting."],
+            ["travel", "to go to different places", "I travel by train."],
+            ["arrive", "to reach a place", "We arrive at noon."],
+            ["leave", "to go away from a place", "The bus will leave at eight."],
+            ["open", "to make something accessible", "Open your book on page ten."],
+            ["close", "to shut", "Please close the door quietly."],
+            ["buy", "to pay money to obtain something", "I buy fruit every Saturday."],
+            ["sell", "to give something in exchange for money", "The shop sells fresh bread."],
+            ["help", "to make an action easier for someone", "May I help you?"],
+            ["work", "activity done for a job or purpose", "I work five days each week."],
+            ["play", "to take part in a game or enjoy activity", "Children play outside."],
+            ["study", "to learn about a subject", "I study English at night."],
+            ["wait", "to stay until something happens", "Please wait for the bus."],
+            ["need", "to require something", "We need more time."],
+            ["want", "to desire something", "I want to speak confidently."],
+            ["like", "to enjoy or approve of something", "I like learning new words."],
+            ["love", "to have a strong affection for", "She loves her English class."],
+            ["live", "to be alive or have a home", "I live in this town."],
+            ["stay", "to remain in a place", "Stay here until the teacher returns."],
+            ["walk", "to move on foot", "We walk to the market."],
+            ["run", "to move quickly on foot", "Children run across the park."],
+            ["drive", "to control a vehicle", "He drives to work."],
+            ["catch", "to take hold of or board transport", "Catch the number ten bus."],
+            ["bring", "to carry something to a place", "Bring your dictionary tomorrow."],
+            ["take", "to carry or move something", "Take this seat."],
+            ["give", "to hand something to someone", "Give the book to your teacher."],
+            ["send", "to cause something to go to someone", "Send me a message tonight."],
+            ["meet", "to come together with someone", "Let's meet at the station."],
+            ["know", "to have information", "Do you know the answer?"],
+            ["learn", "to gain knowledge or skill", "We learn by practising."],
+            ["feel", "to experience emotion or sensation", "I feel confident today."],
+            ["look", "to turn your eyes toward something", "Look at this example."],
+            ["see", "to become aware with your eyes", "I see the school from here."],
+            ["hear", "to become aware with your ears", "Can you hear the teacher?"],
+            ["smile", "to make a happy facial expression", "She gave me a friendly smile."],
+            ["laugh", "to make sounds when something is funny", "We laugh at the joke."],
+            ["quiet", "making little or no noise", "Please keep the library quiet."],
+            ["noisy", "making a lot of sound", "The street is noisy."],
+            ["clean", "free from dirt", "Keep the classroom clean."],
+            ["dirty", "covered with unwanted marks or soil", "Wash the dirty dishes."],
+            ["safe", "protected from danger", "Stay safe when crossing the road."],
+            ["dangerous", "able to cause harm", "That road is dangerous at night."],
+            ["healthy", "in good physical condition", "Eat fruit to stay healthy."],
+            ["sick", "ill or unwell", "The sick child needs rest."],
+            ["strong", "having great power or ability", "She is strong and confident."],
+            ["weak", "not strong", "I feel weak when I do not eat."],
+            ["beautiful", "pleasant to look at", "The view is beautiful."],
+            ["kind", "friendly and caring", "The teacher is kind."],
+            ["friendly", "warm and pleasant toward others", "Our neighbours are friendly."],
+            ["polite", "showing good manners", "Please be polite in conversation."],
+            ["careful", "taking precautions to avoid harm", "Be careful with hot water."],
+            ["honest", "truthful and sincere", "It is important to be honest."],
+            ["early", "before the expected time", "We arrived early."],
+            ["late", "after the expected time", "Don't arrive late for class."],
+            ["near", "a short distance away", "The bank is near the station."],
+            ["far", "a long distance away", "The airport is far from here."]
+          ];
+
+          for (const [word, meaning, example] of lessons) {
+            if (text.includes(word) || text.includes(word.replace(/e$/, "ing"))) {
+              const forms = [
+                `Vocabulary: ${word}\nMeaning: ${meaning}.\nExample: “${example}”\nPractice: Make one sentence with the word “${word}”.`,
+                `The word “${word}” means: ${meaning}.\nNatural example: ${example}\nQuestion: Can you use “${word}” in your own sentence?`,
+                `Let's learn “${word}”.\nMeaning: ${meaning}.\nIn a sentence: ${example}\nNotice how the word sounds and how it connects to the other words.`,
+                `Teacher's note: “${word}” = ${meaning}.\nExample: ${example}\nNow improve the example by adding one detail, such as a time, place, or reason.`,
+                `Question: What does “${word}” mean?\nAnswer: It means ${meaning}.\nStudent example: ${example}\nSpeak the example aloud three times.`,
+                `Mini-dialogue:\nStudent: Can you explain “${word}”?\nTeacher: Yes. ${word} means ${meaning}.\nStudent: For example, ${example}\nTeacher: Excellent!`,
+                `Beginner practice with “${word}”: ${meaning}.\nComplete it: “I use ${word} when ___.”\nModel answer: ${example}`,
+                `Intermediate practice: ${word}\nRewrite the example in the past tense if possible: ${example}\nThen add a reason beginning with “because”.`,
+                `Advanced practice: Replace ${word} with a clearer synonym in context only if the meaning remains accurate.\nBase meaning: ${meaning}.\nModel: ${example}`,
+                `Conversation question: Tell me about a situation where you might use “${word}”.\nHelpful meaning: ${meaning}.\nSuggested response: ${example}`,
+                `Listening drill: ${example}\nStep 1—repeat each word. Step 2—repeat the whole sentence. Step 3—say the sentence from memory.`,
+                `Writing drill: Write a title, add “${word}”, and finish this sentence: “${example}” Explain one new detail in a second sentence.`
+              ];
+              const index = (text.length + text.charCodeAt(0)) % forms.length;
+              return forms[index];
+            }
+          }
+          return null;
+        }
+
+        getEnglishTutorResponse(command) {
+          const cmd = command.toLowerCase().trim();
+          const conversationAnswer = this.getEnglishConversationAnswer(command);
+          if (conversationAnswer) return conversationAnswer;
+
+          const quizAnswers = ["a", "b", "c"];
+          try {
+            const lastQuiz = JSON.parse(localStorage.getItem("englishLastQuiz") || "null");
+            if (lastQuiz && quizAnswers.includes(cmd)) {
+              const correct = cmd === lastQuiz[1];
+              return correct ? `Correct! ${lastQuiz[2]} Excellent work. Ask for another vocabulary quiz when you're ready.` : `Not quite. The correct answer was ${lastQuiz[1]}. ${lastQuiz[2]} Try asking for a vocabulary quiz again.`;
+            }
+          } catch (_) {}
+
+          const englishRequest = /(english|grammar|vocabulary|pronunciation|lesson|word|sentence|verb|past tense|present tense|future tense|conversation|speaking|spelling|beginner|intermediate|advanced|i want to learn|teach me|correct (my|this)|rewrite|essay|ielts|toefl)/.test(cmd);
+          if (!englishRequest) return null;
+
+          if (/^(i am|i'm|my level is|level is)?\s*(beginner|intermediate|advanced)$/i.test(cmd)) {
+            const level = cmd.match(/beginner|intermediate|advanced/i)[0].toLowerCase();
+            this.userInfo.preferences.learningLevel = level;
+            this.saveUserData();
+            const lessons = {
+              beginner: "Great. Beginner lesson: complete this sentence—‘I ___ English every day.’ Choose: learn, learning, or learned. Answer, and I will explain why.",
+              intermediate: "Good. Intermediate lesson: change this sentence into the present perfect—‘I start learning English in 2024.’ Then tell me what the tense shows.",
+              advanced: "Excellent. Advanced lesson: rewrite this sentence more naturally: ‘I am very interested to learn English because it can help me in my future life.’ Focus on idiomatic and precise wording."
+            };
+            return lessons[level];
+          }
+
+          if (/(start.*lesson|english lesson|teach me|learn english)/.test(cmd)) {
+            this.userInfo.preferences.currentEnglishLevel = this.userInfo.preferences.currentEnglishLevel || "beginner";
+            this.saveUserData();
+            return "Let’s begin! Choose a level: beginner, intermediate, or advanced—or type a topic such as greetings, travel, work, food, or health. Then try this sentence: ‘I am learning English every day.’";
+          }
+
+          if (/(practice conversation|speaking practice|role.?play)/.test(cmd)) {
+            const topics = [
+              { topic: "Meeting someone new", first: "Hello! My name is Alex. What's your name?", choices: "A: I'm glad to meet you.\nB: Nice to meet you too. My name is …" },
+              { topic: "Ordering food", first: "Good evening. Are you ready to order?", choices: "A: Could I have the chicken, please?\nB: Yes, please. I'd like ..." },
+              { topic: "Asking for directions", first: "Excuse me, where is the nearest train station?", choices: "A: Go straight and turn left at the bank.\nB: I'm not sure, but I can help you look." },
+              { topic: "At work", first: "What do you usually do on Monday mornings?", choices: "A: I attend a team meeting.\nB: I check my emails and plan my week." },
+              { topic: "Making travel plans", first: "Where would you like to travel this year?", choices: "A: I'd like to visit ...\nB: I want to go to ... because ..." }
+            ];
+            const savedPracticeCount = Number(localStorage.getItem("englishPracticeCount") || 1000);
+            const completed = Math.max(savedPracticeCount, 1000) + 1;
+            localStorage.setItem("englishPracticeCount", String(completed));
+            const scenario = topics[completed % topics.length];
+            return `Conversation practice ${completed} — ${scenario.topic}\nTeacher: ${scenario.first}\nUseful answers:\n${scenario.choices}\nYour turn: choose an answer, then reply in full sentences.`;
+          }
+
+          if (/vocabulary|new words|word/.test(cmd)) {
+            const words = [
+              ["achieve", "to successfully reach a goal", "I want to achieve my English goal."],
+              ["confident", "feeling sure about yourself", "I feel confident when I practise."],
+              ["improve", "to become better", "I practise every day to improve."],
+              ["patient", "able to wait calmly", "Learning a language takes patient practice."],
+              ["useful", "helpful or practical", "This vocabulary lesson is useful."]
+            ];
+            const lesson = words[Math.floor(Date.now() / 86400000) % words.length];
+            return `Vocabulary: **${lesson[0]}**\nMeaning: ${lesson[1]}\nExample: ${lesson[2]}\nTask: write a new sentence using “${lesson[0]}”. I will check it for you.`;
+          }
+
+          if (/grammar/.test(cmd)) {
+            return "Grammar tip: Use the present simple for habits, and the present continuous for an action happening now.\n• Habit: I study English every evening.\n• Now: I am studying English now.\nTry it: Write two sentences—one for a habit and one for something happening now.";
+          }
+
+          if (/pronunciation/.test(cmd)) {
+            return "Pronunciation practice: say each word slowly, then naturally:\n/θ/: think, three, Thursday\n/ð/: this, that, together\nStress the word: ‘I WANT to learn English.’\nNow read: ‘The third student thinks this lesson is helpful.’ Type ‘play’ only if I should explain sounds more slowly.";
+          }
+
+          if (/correct|rewrite/.test(cmd)) {
+            const sample = command.replace(/^.*?(correct|rewrite)\s*(my|this)?\s*/i, "").trim();
+            if (sample && sample.length > 2 && !/english|sentence/i.test(sample)) {
+              return `Check your sentence:\n• Original: ${sample}\nI can help with corrections. Paste the full sentence after “correct”, or use: “correct: She go to school every day.”`;
+            }
+            return "Sure. Paste your sentence beginning with “Correct:”. Example: Correct: She go to school every day. I will explain every correction clearly, without changing your meaning.";
+          }
+
+          if (/past tense/.test(cmd)) return "The simple past describes a finished action: ‘I visited London last year.’ Regular verbs add -ed; irregular verbs change, such as go → went and eat → ate. Write a sentence about what you did yesterday.";
+          if (/present tense/.test(cmd)) return "Use the present simple for routines and facts: I study English every day. For third person singular, add -s: He studies English. What is your daily routine?";
+          if (/future tense/.test(cmd)) return "Use ‘will’ for instant decisions and predictions: I will call you later. Use ‘going to’ for plans already decided: I am going to study tonight. Complete: ‘Tomorrow I am going to …’";
+
+          if (/test.*vocabulary|vocabulary.*quiz|quiz/.test(cmd)) {
+            const quizzes = [
+              ["Choose the meaning of ‘rapid’: a) very fast b) very small c) very quiet", "a", "Rapid means very fast."],
+              ["Choose the synonym of ‘happy’: a) tired b) joyful c) worried", "b", "Joyful means the same as happy."],
+              ["Complete: We ___ every Friday. a) practise b) practises c) practicing", "a", "The subject ‘we’ uses the base verb: practise."],
+              ["Choose the opposite of ‘expensive’: a) cheap b) large c) modern", "a", "The opposite of expensive is cheap."]
+            ];
+            const q = quizzes[Math.floor(Math.random() * quizzes.length)];
+            localStorage.setItem("englishLastQuiz", JSON.stringify(q));
+            return `Vocabulary quiz:\n${q[0]}\nReply with a, b, or c.`;
+          }
+
+          const answers = ["a", "b", "c"];
+          try {
+            const lastQuiz = JSON.parse(localStorage.getItem("englishLastQuiz") || "null");
+            if (lastQuiz && answers.some(a => cmd === a)) {
+              const correct = cmd === lastQuiz[1];
+              return correct ? `Correct! ${lastQuiz[2]} Excellent work. Ask for another vocabulary quiz when you're ready.` : `Not quite. The correct answer was ${lastQuiz[1]}. ${lastQuiz[2]} Try asking for a vocabulary quiz again.`;
+            }
+          } catch (_) {}
+
+          return "I can help with English through a lesson, grammar, vocabulary, pronunciation, writing, correction, or conversation practice. What skill would you like to practise?";
         }
 
         extractUserName(command) {
@@ -2327,7 +2927,7 @@
             },
             // Welcome messages
             welcome: {
-              en: "Hello! I'm MADELEINE, your AI assistant. I'm here to help with advanced queries, creative tasks, and intelligent conversations. How may I assist you today?",
+              en: "Hello! Before we begin learning English, what's your name?",
               sw: "Habari! Mimi ni MADELEINE, msaidizi wako wa AI. Nipo hapa kukusaidia na maswali ya hali ya juu, kazi za ubunifu, na mazungumzo ya akili. Ninawezaje kukusaidia leo?",
               fr: "Bonjour ! Je suis MADELEINE, votre assistante IA. Je suis là pour vous aider avec des requêtes avancées, des tâches créatives et des conversations intelligentes. Comment puis-je vous assister aujourd'hui ?",
             },
@@ -3804,10 +4404,44 @@
           this.updateWelcomeMessage();
         }
 
+        initializeStudentIdentity() {
+          const welcomeMsg = document.getElementById("welcomeMessage");
+          this.awaitingName = !this.userInfo.name;
+          if (this.userInfo.name) {
+            if (welcomeMsg) {
+              welcomeMsg.textContent = `Welcome back, ${this.userInfo.name}! We will continue your English lessons. What would you like to practise today?`;
+            }
+          } else {
+            if (welcomeMsg) {
+              welcomeMsg.textContent = "Hello! Before we begin learning English, what's your name?";
+            }
+          }
+        }
+
+        rememberStudentName(message) {
+          const namePatterns = [
+            /^(?:my name is|i am|i'm|call me|you can call me)\s+([a-z][a-z' -]{0,29})$/i,
+            /^([a-z][a-z' -]{0,29})$/i
+          ];
+          for (const pattern of namePatterns) {
+            const match = message.trim().match(pattern);
+            if (!match) continue;
+            const candidate = (match[1] || match[0]).trim().replace(/\s+/g, " ");
+            if (!candidate || /^(hello|hi|hey|english|teacher|yes|no)$/i.test(candidate)) continue;
+            const words = candidate.split(" ");
+            return words.map(word => word ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() : "").join(" ");
+          }
+          return null;
+        }
+
         updateWelcomeMessage() {
           const welcomeMsg = document.getElementById("welcomeMessage");
           if (welcomeMsg) {
-            welcomeMsg.textContent = this.getLocalizedResponse("welcome");
+            if (this.userInfo.name) {
+              welcomeMsg.textContent = `Welcome back, ${this.userInfo.name}! What English skill would you like to practise?`;
+            } else {
+              welcomeMsg.textContent = "Hello! Before we begin learning English, what's your name?";
+            }
           }
         }
 
@@ -4110,9 +4744,22 @@
           this.addMessage(message, "user");
           this.textInput.value = "";
 
-          // Process the command
           setTimeout(() => {
-            const response = this.processCommand(message);
+            let response;
+            if (this.awaitingName) {
+              const studentName = this.rememberStudentName(message);
+              if (studentName) {
+                this.userInfo.name = studentName;
+                this.userInfo.preferences.learningLevel = "beginner";
+                this.awaitingName = false;
+                this.saveUserData();
+                response = `Nice to meet you, ${studentName}! I will remember your name. Let's begin with a short placement check. What is your English level: beginner, intermediate, or advanced?`;
+              } else {
+                response = "Please tell me your name, for example: My name is John, or simply type John.";
+              }
+            } else {
+              response = this.processCommand(message);
+            }
             this.addMessage(response, "assistant");
             this.speak(response);
           }, 500);
@@ -4137,6 +4784,12 @@
           ) {
             this.switchLanguage(requestedLanguage);
             return; // switchLanguage handles the response
+          }
+
+          const englishTutorResponse = this.getEnglishTutorResponse(originalCommand);
+          if (englishTutorResponse) {
+            this.storeConversationContext(originalCommand, englishTutorResponse, "English learning");
+            return englishTutorResponse;
           }
 
           // 🧠 CONVERSATION CONTINUITY & MEMORY RECALL 🧠
